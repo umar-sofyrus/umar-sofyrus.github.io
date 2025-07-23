@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: blue;
+        }
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Testing Website</h1>
+    <p>Select a page to explore:</p>
+    <a href="iframe_page.html">Nested Iframes Page</a>
+    <a href="simple_page.html">Simple Iframes Page</a>
+
+    <h2>Interactive Elements</h2>
+    <label for="selectBox">Choose an option:</label>
+    <select id="selectBox" onchange="displaySelection()">
+        <option value="">--Select an option--</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectionText"></p>
+
+    <label for="inputField">Enter some text:</label>
+    <input type="text" id="inputField" oninput="displayInput()" />
+    <p id="inputText"></p>
+
+    <script>
+        function displaySelection() {
+            const selectBox = document.getElementById('selectBox');
+            const selectionText = document.getElementById('selectionText');
+            selectionText.textContent = 'You selected: ' + selectBox.value;
+        }
+
+        function displayInput() {
+            const inputField = document.getElementById('inputField');
+            const inputText = document.getElementById('inputText');
+            inputText.textContent = 'You entered: ' + inputField.value;
+        }
+    </script>
+</body>
+</html>

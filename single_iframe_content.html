@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Iframe Content</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 10px; }
+        button:hover { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>Single Iframe Content</h2>
+    <label for="selectBoxS">Choose an option:</label>
+    <select id="selectBoxS" onchange="displaySelection()">
+        <option value="">--Select an option--</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectionTextS"></p>
+
+    <label for="inputFieldS">Enter some text:</label>
+    <input type="text" id="inputFieldS" oninput="displayInput()" />
+    <p id="inputTextS"></p>
+
+    <button onclick="alert('Button in Single Iframe clicked!')">Hoverable Button</button>
+
+    <script>
+        function displaySelection() {
+            const selectBox = document.getElementById('selectBoxS');
+            const selectionText = document.getElementById('selectionTextS');
+            selectionText.textContent = 'You selected: ' + selectBox.value;
+        }
+        function displayInput() {
+            const inputField = document.getElementById('inputFieldS');
+            const inputText = document.getElementById('inputTextS');
+            inputText.textContent = 'You entered: ' + inputField.value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Iframe 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 10px; }
+        button:hover { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>Nested Iframe 2</h2>
+    <label for="selectBox2">Choose an option:</label>
+    <select id="selectBox2" onchange="displaySelection()">
+        <option value="">--Select an option--</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectionText2"></p>
+
+    <label for="inputField2">Enter some text:</label>
+    <input type="text" id="inputField2" oninput="displayInput()" />
+    <p id="inputText2"></p>
+
+    <button onclick="alert('Button in Nested Iframe 2 clicked!')">Hoverable Button</button>
+
+    <script>
+        function displaySelection() {
+            const selectBox = document.getElementById('selectBox2');
+            const selectionText = document.getElementById('selectionText2');
+            selectionText.textContent = 'You selected: ' + selectBox.value;
+        }
+        function displayInput() {
+            const inputField = document.getElementById('inputField2');
+            const inputText = document.getElementById('inputText2');
+            inputText.textContent = 'You entered: ' + inputField.value;
+        }
+    </script>
+</body>
+</html>

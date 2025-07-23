@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nested Iframes Page</h1>
+
+    <iframe src="nested_iframe_1.html"></iframe>
+    <iframe src="nested_iframe_2.html"></iframe>
+
+    <script>
+        function displayText(id, text) {
+            document.getElementById(id).innerText = text;
+        }
+    </script>
+
+</body>
+</html>
