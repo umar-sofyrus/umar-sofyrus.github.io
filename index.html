@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,14 @@
             text-decoration: none;
             color: blue;
         }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            margin-top: 10px;
+        }
         button:hover {
             background-color: lightgray;
         }
@@ -25,6 +33,9 @@
     <p>Select a page to explore:</p>
     <a href="iframe_page.html">Nested Iframes Page</a>
     <a href="simple_page.html">Simple Iframes Page</a>
+
+    <!-- New Button -->
+    <button onclick="openNewTab()">Open New Page in Tab</button>
 
     <h2>Interactive Elements</h2>
     <label for="selectBox">Choose an option:</label>
@@ -51,6 +62,11 @@
             const inputField = document.getElementById('inputField');
             const inputText = document.getElementById('inputText');
             inputText.textContent = 'You entered: ' + inputField.value;
+        }
+
+        // Function to open a new page in a new tab
+        function openNewTab() {
+            window.open("new_page.html", "_blank");
         }
     </script>
 </body>
